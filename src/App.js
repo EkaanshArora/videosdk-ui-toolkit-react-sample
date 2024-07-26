@@ -26,7 +26,10 @@ function App() {
       body: JSON.stringify({
         sessionName:  config.sessionName,
         role: role,
-      })
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     }).then((response) => {
         return response.json()
     }).then((data) => {
